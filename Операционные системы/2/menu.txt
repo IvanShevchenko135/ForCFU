@@ -1,0 +1,12 @@
+:start
+@echo Enter parametr: 
+@set par=
+@set /p par=""
+@if "%par%" == "" goto no_par
+@if "%par%" == "0" goto end
+call C:\Vanya\Documents\DOS\2\LAB_2.bat %par%
+@goto start
+:no_par 
+call C:\Vanya\Documents\DOS\2\LAB_2.bat
+@goto start
+:end

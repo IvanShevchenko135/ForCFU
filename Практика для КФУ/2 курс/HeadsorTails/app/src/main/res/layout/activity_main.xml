@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#FFFFFF"
+        android:bottom="10dp"
+        android:left="10dp"
+        android:radius="15dp"
+        android:text="Отмена"
+        android:textSize="25sp"
+        android:top="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonQuit"
+        app:layout_constraintEnd_toEndOf="@+id/unknownSide"
+        app:layout_constraintStart_toStartOf="@+id/unknownSide"
+        app:layout_constraintTop_toBottomOf="@+id/unknownSide"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/buttonFilp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:backgroundTint="#FFFFFF"
+        android:bottom="10dp"
+        android:left="10dp"
+        android:radius="15dp"
+        android:text="Бросить монету"
+        android:textSize="20sp"
+        android:top="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonQuit"
+        app:layout_constraintEnd_toEndOf="@+id/unknownSide"
+        app:layout_constraintStart_toStartOf="@+id/unknownSide"
+        app:layout_constraintTop_toBottomOf="@+id/unknownSide"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/buttonQuit"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="#9E0404"
+        android:text="Выйти"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonFilp"
+        app:layout_constraintStart_toStartOf="@+id/buttonFilp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <ImageView
+        android:id="@+id/unknownSide"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14999998"
+        app:srcCompat="@drawable/coin_unknown" />
+
+    <ImageView
+        android:id="@+id/coinHeads"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14999998"
+        app:srcCompat="@drawable/coin_heads" />
+
+    <ImageView
+        android:id="@+id/coinTails"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14999998"
+        app:srcCompat="@drawable/coin_tails" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Сайт</title>
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+	<header>
+		<div class="header">
+			<a style="display: block; text-decoration: none; color: #fff;" href="Index.html">
+				<div class="logo">
+					<img class="icon" src="icon.jpg" alt="Иконка">
+					<p class="name">Изобилие</p>	
+				</div>
+			</a>
+			<p class="slogan">Доставим товар в любое время, куда угодно</p>
+			<p>Наш телефон: <br><b>+7 (978) 325-75-84</b></p>
+		</div>
+	</header>
+	<section class="main">
+		<div class="menu_conteiner">
+			<ul class="menu">
+				<li><a class="menu_item" href="Index.html">Главная</a></li>
+				<li><a class="menu_item" href="Table.html">Товары</a></li>
+				<li><a class="menu_item active" href="Images.html">Заказать</a></li>
+				<li><a class="menu_item" href="Text.html">О нас</a></li>
+				<li><a class="menu_item" href="Lists.html">О нас(коротко)</a></li>
+	 		</ul>
+		</div>
+		<div class="content">
+			<form>
+				<div class="order_container">
+					<div class="FIO">
+						<p>Имя<br><input name="first_name" type="text"></p><p>Фамилия<br><input name="last_name" type="text"></p>
+					</div>
+					<div class="connection">
+						<p style="margin: 0 0 5px;">Телефон<br><input name="phone" type="text"></p><p style="margin: 0;">E-mail<br><input name="mail" type="text"></p>
+					</div>
+	                <p class="product_title">Название товара <input name="product_title" style="width: 100%" type="text"></p>
+	                <p class="order_adress">Адрес <input name="adress" style="width: 100%" type="text"></p>
+	                <p class="order"><input value="Заказать" type="submit"></p>
+				</div>
+			</form>
+			<h2>Наши спонсоры:</h2>
+			<div class="sponsors">
+				<p><a href="https://www.rncb.ru/"><img src="rncb.jpg" alt="РНКБ" class="rncb"></a><br><b>РНКБ</b></p>
+				<p><a href="http://cfuv.ru/"><img src="cfuv.jpg" alt="КФУ" class="cfuv"></a><br><b>КФУ им. Вернадского</b></p>
+				<p><a href="http://xn--b1aawrable3c.xn--p1ai/"><img src="skvor.jpg" alt="Скворцово" class="skvor"></a><br><b>Скворцово</b></p>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

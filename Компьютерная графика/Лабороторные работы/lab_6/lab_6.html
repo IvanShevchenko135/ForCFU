@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лабороторная работа №6</title>
+</head>
+
+<body>
+    <canvas id="canvas" height="700" width="700" style="border: 1px solid black;">
+        Ваш браузер не поддерживаетcanvas:(
+    </canvas> <br> <br>
+    <button onmousedown="chk_x1 = true; increaseAngleX();" onmouseup="chk_x1 = false;"
+        style="height: 50px; width: 50px;">X+</button>
+    <button onmousedown="chk_x2 = true; reduceAngleX();" onmouseup="chk_x2 = false;"
+        style="height: 50px; width: 50px;">X-</button> <br> <br>
+    <button onmousedown="chk_y1 = true; increaseAngleY();" onmouseup="chk_y1 = false;"
+        style="height: 50px; width: 50px;">Y+</button>
+    <button onmousedown="chk_y2 = true; reduceAngleY();" onmouseup="chk_y2 = false;"
+        style="height: 50px; width: 50px;">Y-</button> <br> <br>
+    <button onmousedown="chk_z1 = true; increaseAngleZ();" onmouseup="chk_z1 = false;"
+        style="height: 50px; width: 50px;">Z+</button>
+    <button onmousedown="chk_z2 = true; reduceAngleZ();" onmouseup="chk_z2 = false;"
+        style="height: 50px; width: 50px;">Z-</button>
+    <script>
+        canvas = document.getElementById('canvas');
+        c = canvas.getContext('2d');
+    </script>
+    <script src="lab_6.js"></script>
+</body>
+
+</html>

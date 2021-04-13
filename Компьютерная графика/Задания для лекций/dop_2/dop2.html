@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>dop2</title>
+    <meta charset="utf-8" />
+</head>
+
+<body> 
+    <canvas id="canvas" width="1600" height="700" style = "border: 2px solid #000"></canvas>
+    <script>
+        canvas = document.getElementById('canvas');
+        c = canvas.getContext('2d');
+    </script>
+    <script>
+        sun = new Image();
+        moon = new Image();
+        sun.src = 'sun.png';
+        moon.src = 'moon.png';
+        sun.onload = function() {sunMove();};
+        function sunMove() {
+            let t = Math.PI;
+            let r = 700;
+            let timer = setInterval(function() {
+
+                if (t < 0)  {
+                    clearInterval(timer);
+                    moonMove();
+                }
+                
+                x = r * Math.cos(t) + 700;
+                y = -r * Math.sin(t) + 700;
+
+                c.moveTo(0, 0);
+                c.lineTo(1600, 0);
+                c.lineTo(1600, 700);
+                c.lineTo(0, 700);
+                c.lineTo(0, 0);
+                c.fillStyle = 'DarkTurquoise';
+                c.fill();
+                c.drawImage(sun, x, y);
+
+                t -= 0.01;
+			}, 20);
+        }
+
+        function moonMove() {
+            let t = Math.PI;
+            let r = 700;
+            let timer = setInterval(function() {
+
+                    if (t < 0)  {
+                        clearInterval(timer);
+                        sunMove();
+                    }
+                    
+                    x = r * Math.cos(t) + 700;
+                    y = -r * Math.sin(t) + 700;
+
+                    c.moveTo(0, 0);
+                    c.lineTo(1600, 0);
+                    c.lineTo(1600, 700);
+                    c.lineTo(0, 700);
+                    c.lineTo(0, 0);
+                    c.fillStyle = 'Navy';
+                    c.fill();
+                    c.drawImage(moon, x, y);
+
+                    t -= 0.01;
+                }, 20);
+            }
+    </script>
+</body>
+
+</html>
