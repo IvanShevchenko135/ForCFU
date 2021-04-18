@@ -1,0 +1,23 @@
+CREATE DATABASE `lab_8` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `lab_8`;
+
+CREATE TABLE `cities` (
+  `name` varchar(50) NOT NULL UNIQUE,
+  `country` varchar(50) NOT NULL,
+  `population` int(11),
+  `area` float,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE `attractions` (
+  `name` varchar(50) NOT NULL UNIQUE,
+  `city_name` varchar(50),
+  `address` varchar(150) NOT NULL,
+  `foundation_date` date, 
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (city_name) REFERENCES cities (name),
+  [ON UPDATE CASCADE],
+  [ON DELETE RESTRICT],
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+INSERT INTO `cities` (`name`, `country`, `area`, `population`) VALUES ('Киев', 'Украина', 3746, 400000);
