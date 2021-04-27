@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа №8</title>
+</head>
+
+<body>
+
+    <div style="text-align: center; margin: 0 auto; width: 450px;">
+        <h1>Введите информацию о городе</h1>
+
+        <form id="save_form" action="/lab_8_save.php" method="post" name="save">
+            <p style="font-weight: bold;">Название:</p>
+            <input name="name" type="text" required> <br>
+
+            <p style="font-weight: bold;">Страна:</p>
+            <input name="country" type="text" required> <br>
+
+            <p style="font-weight: bold;">Население:</p>
+            <input name="population" type="text" required> <br>
+
+            <p style="font-weight: bold;">Площадь:</p>
+            <input name="area" type="text" required> <br>
+
+            <input type="submit" name="submit_btn" value="Сохранить информацию"
+                style="margin-top: 30px; width: 200px; height: 30px; font-weight: bold;">
+
+            <input value="cities" name="table" type="text" style="display: none;">
+        </form>
+        <a href="lab_8.php"><button style="margin: 10px auto; width: 200px; height: 30px; font-weight: bold;">Найти запись</button></a>
+        <br>
+        <a href="lab_8_attractions.php"><button style="margin: 0 auto; width: 200px; height: 40px; font-weight: bold;">Добавить достопримечательность</button></a>
+    </div>
+</body>
+
+</html>
